@@ -1,0 +1,12 @@
+.footer {
+    position: fixed; /* Ensures the footer stays at the bottom of the page */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Makes the footer span the full width of the page */
+    padding: 20px;
+    background-color:#264653;
+    text-align: center; /* Fixes the typo */
+    color: aliceblue;
+    margin-top: 0; /* Removes the margin at the top to avoid unnecessary spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}

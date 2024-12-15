@@ -13,6 +13,7 @@ function RoutesLayout() {
         <Header /> {/* Ensure Header is included here */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/ecommerce-application" element={<Home />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>

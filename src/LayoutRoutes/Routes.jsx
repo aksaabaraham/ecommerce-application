@@ -6,9 +6,11 @@ import Home from "../components/Home/Home";
 import Logout from "../components/Logout/Logout";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 
+
 function RoutesLayout() {
   return (
     <>
+    
       <Router>
         <Header /> {/* Ensure Header is included here */}
         <Routes>
@@ -19,6 +21,7 @@ function RoutesLayout() {
         </Routes>
         <Footer />
       </Router>
+      
     </>
   );
 }

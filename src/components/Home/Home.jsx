@@ -21,28 +21,46 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h1>Welcome to CCC Store</h1>
-      <p>Browse our collection of amazing products:</p>
-      <div className="product-grid">
+      {/* Header */}
+      <header className="home-header">
+        <h1 className="home-title">Welcome to CCC Store</h1>
+        <p className="home-subtitle">Browse our collection of amazing products:</p>
+      </header>
+
+      {/* Product Section */}
+      <section className="product-grid">
         {products.length > 0 ? (
           products.map((product) => (
-            <div className="product-card" key={product.id}>
+            <article
+              className="product-card"
+              key={product.id}
+              role="article"
+              aria-label={product.title}
+            >
               <img
                 src={product.image}
                 alt={product.title}
                 className="product-image"
+                loading="lazy"
               />
-              <h2 className="product-title">{product.title}</h2>
-              <p className="product-price">${product.price}</p>
-              <Link to={`/product/${product.id}`}>
-                <button className="product-details-button">View Details</button>
-              </Link>
-            </div>
+              <div className="product-info">
+                <h2 className="product-title">{product.title}</h2>
+                <p className="product-price">${product.price}</p>
+                <Link to={`/product/${product.id}`} className="product-link">
+                  <button className="product-details-button">View Details</button>
+                </Link>
+              </div>
+            </article>
           ))
         ) : (
           <p className="loading-text">Loading products...</p>
         )}
-      </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="home-footer">
+        <p>&copy; 2024 CCC Store. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
